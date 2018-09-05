@@ -104,15 +104,19 @@ If you do not have wget use,
 In Powershell (as Admin):  
 `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
 2. Install Ubuntu 18.04  
-From the Windows Store, search for Ubuntu 18.04
+From the Windows Store, search for `Ubuntu 18.04`
 
-3. Install Chocolatey  
-In Powershell (as Admin):  
-`Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`  
+3. Install [Scoop](https://github.com/lukesampson/scoop)  
+In Powershell execute:  
+`iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+`  
 
-4. Install Hyper  
-In Powershell (as Admin):  
-`choco install -y hyper`
+4. Add the [Scoop Extras Bucket](https://github.com/lukesampson/scoop-extras)
+In a Command Prompt execute: `scoop bucket add extras`
+
+5. Install Hyper  
+In Powershell:  
+`scoop install hyper`
 
 5. Install Font  
 Download Inconsolata (or your preferred font), open, and click "Install"
